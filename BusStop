@@ -1,0 +1,22 @@
+let Distance = 0
+let busStop = 0
+input.onButtonPressed(Button.B, () => {
+    basic.showNumber(Distance)
+})
+input.onButtonPressed(Button.A, () => {
+    basic.showNumber(busStop)
+})
+input.onButtonPressed(Button.AB, () => {
+    basic.showString("Bus #8")
+})
+busStop = 0
+for (let i = 0; i < 5; i++) {
+    Distance = 5
+    for (let i = 0; i < 5; i++) {
+        music.setTempo(10)
+        music.rest(music.beat(BeatFraction.Double))
+        music.rest(music.beat(BeatFraction.Whole))
+        Distance += -1
+    }
+    busStop += 1
+}
